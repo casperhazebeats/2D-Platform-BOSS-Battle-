@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4b9580bab51ae43bcee05c9fabb1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accelerationForce: 20
+  maxSpeed: 5
   rb2d: {fileID: 1361589476}
 --- !u!1001 &1557107401
 Prefab:
