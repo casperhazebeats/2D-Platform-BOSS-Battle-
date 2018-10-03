@@ -1,21 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PlayerCharacter : MonoBehaviour {
+public class PlayerCharacter : MonoBehaviour
+{
     [SerializeField]
-    private int lives = 3; // PascalCase or camel Case
-
+    private float speed = 5;
     [SerializeField]
-    private string name = "Mario";
+    private Rigidbody2D rb2d;
+private float horizontalInput;
+    //Use this for Initialization
+void Start()
+{
 
-    [SerializeField]
-    private float jumpHeight = 5, speed = 5;
-
-    private bool hasKey;
-
-    private bool isOnGround;
-    // Use this for initialization
 }
-  
+    //update is called once per frame
+void Update()
+{
+        horizontalInput = Input.GetAxis("Horizontal");
+
+      
+}
+    private void FixedUpdate()
+    {
+        rb2d.AddForce(Vector2.right * horizontalInput * speed);
+    }
+
 }
