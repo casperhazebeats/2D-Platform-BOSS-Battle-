@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 726146718}
   - component: {fileID: 726146717}
   - component: {fileID: 726146716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 844677729}
   - component: {fileID: 844677728}
   - component: {fileID: 844677727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 1361589476}
   - component: {fileID: 1361589479}
   - component: {fileID: 1361589480}
+  - component: {fileID: 1361589481}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -521,7 +522,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accelerationForce: 20
   maxSpeed: 5
+  jumpForce: 10
   rb2d: {fileID: 1361589476}
+  groundContactFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 256
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+--- !u!58 &1361589481
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361589475}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.17}
+  serializedVersion: 2
+  m_Radius: 0.44
 --- !u!1001 &1557107401
 Prefab:
   m_ObjectHideFlags: 0
@@ -620,7 +651,7 @@ GameObject:
   - component: {fileID: 1967925811}
   - component: {fileID: 1967925810}
   - component: {fileID: 1967925812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

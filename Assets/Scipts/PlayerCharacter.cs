@@ -12,25 +12,49 @@ public class PlayerCharacter : MonoBehaviour
     private float jumpForce = 10;
     [SerializeField]
     private Rigidbody2D rb2d;
+    [SerializeField]
+    private ContactFilter2D groundContactFilter;
+    [SerializeField]
+    private Collider2D groundDetectTrigger;
+    [SerializeField]
+    private Collider2D[] groundHitDetectionResults = new Collider2D[16];
 
-private float horizontalInput;
+
+    private float horizontalInput;
+    [SerializeField]
+    private float isOnGround;
     //Use this for Initialization
-void Start()
+    void Start()
 {
 
 }
     //update is called once per frame
 void Update()
-{
-        horizontalInput = Input.GetAxis("Horizontal");
+    {
+        UpdateIsOnGround();
+        UpdateHorizontalInput();
 
+        HandleJumpInput();
+
+    }
+    private void UpdateIsOnGround()
+    {
+        isOnGround = groundDetectTrigger.OverlapCollider(groundContactFilter, groundHitDetectionResults) > 0;
+        Debug.Log("IsOnGround?:" + isOnGround)
+    }
+    private void UpdateHorizontalInput()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+    }
+
+    private void HandleJumpInput()
+    {
         if (Input.GetButtonDown("Jump"))
         {
             rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+    }
 
-      
-}
     private void FixedUpdate()
     {
         Move();
