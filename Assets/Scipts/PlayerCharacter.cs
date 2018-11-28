@@ -25,6 +25,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField]
     private Collider2D playerGroundCollider;
     private Checkpoint currentCheckpoint;
+    public AudioSource jumpSound;
 
     private float horizontalInput;
     [SerializeField]
@@ -40,6 +41,11 @@ void Update()
         UpdateIsOnGround();
         UpdateHorizontalInput();
         HandleJumpInput();
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpSound.Play();
+        }
 
     }
     private void FixedUpdate()
