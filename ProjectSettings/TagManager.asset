@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TEXTWIN
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Back
   - 
   - 
   - 
@@ -38,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: back back
+    uniqueID: 4002411705
+    locked: 0
+  - name: even more back
+    uniqueID: 3900050191
+    locked: 0
   - name: Background
     uniqueID: 4008678625
     locked: 0

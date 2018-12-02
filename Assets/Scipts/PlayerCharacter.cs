@@ -30,6 +30,7 @@ public class PlayerCharacter : MonoBehaviour
     private float horizontalInput;
     [SerializeField]
     private bool isOnGround;
+
     //Use this for Initialization
     void Start()
 {
