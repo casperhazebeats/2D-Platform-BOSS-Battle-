@@ -10,11 +10,11 @@ public class PlayerAnim : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    // Update is called once per frame
+    void Update()
     {
-        if(Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("IsSkipping", true);
         }
@@ -23,9 +23,10 @@ public class PlayerAnim : MonoBehaviour {
             anim.SetBool("IsSkipping", false);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("IsJumping");
         }
-	}
+    }
+
 }
