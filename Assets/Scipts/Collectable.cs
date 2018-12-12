@@ -8,22 +8,25 @@ public class Collectable : MonoBehaviour
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2;
+    private Rigidbody rb;
 
     public Text countText;
     public Text winText;
+
     private static int coinCount;
     private int coinCoint;
 
-    private void Start()
+    void Start()
     {
+        rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider2 = GetComponent<BoxCollider2D>();
         coinCount = 0;
-        countText.text = "Coin count: " + coinCount.ToString();
+        SetCountText();
         winText.text = "";
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -35,16 +38,17 @@ public class Collectable : MonoBehaviour
             Destroy(this.gameObject, audioSource.clip.length);
             coinCount = coinCount + 1;
             countText.text = "Coin count: " + coinCount.ToString();
+            SetCountText();
 
         }
-        //public void TextWin()
-        //{
-        //    if(coinCoint >= 3)
-        //    {
-        //        (spriteRenderer.CompareTag("TEXTWIN")) = true;
-        //        //winText.text = "YOU WIN";
-        //    }
 
-        //}
+    }
+        void SetCountText()
+        {
+            if(coinCoint >= 25)
+            {
+            //spriteRenderer.enabled = true;
+                winText.text = "YOU WIN";
+            }
     }
 }

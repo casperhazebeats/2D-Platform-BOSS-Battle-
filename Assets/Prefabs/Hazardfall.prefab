@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212427545841117190}
   - component: {fileID: 60132351751841290}
   - component: {fileID: 114002368320083000}
+  - component: {fileID: 114864286290209348}
   - component: {fileID: 82153075415336570}
   m_Layer: 0
   m_Name: Hazardfall
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1982721943005624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.62853, y: -4.952234, z: 0}
+  m_LocalPosition: {x: 10.79, y: 32.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,9 +68,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: -0.5194187, y: 0.68940353}
+      - {x: -0.6930914, y: -0.533535}
+      - {x: 0.7015152, y: -0.5605984}
+      - {x: 0.64578056, y: 0.5997734}
 --- !u!82 &82153075415336570
 AudioSource:
   m_ObjectHideFlags: 1
@@ -178,6 +180,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionGo: {fileID: 1730759369651814, guid: 553a7e05c3c9648bdad50ea6f500f175,
     type: 2}
+--- !u!114 &114864286290209348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982721943005624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5077d51bd9864032bc6ca1e40d4ebff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xLimit: 13
+  moveSpeed: 300
 --- !u!212 &212427545841117190
 SpriteRenderer:
   m_ObjectHideFlags: 1

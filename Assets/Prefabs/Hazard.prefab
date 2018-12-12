@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511871651261024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.74, y: -3.7630558, z: 0}
+  m_LocalPosition: {x: -3.6299438, y: -6.5146046, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionGo: {fileID: 1730759369651814, guid: 553a7e05c3c9648bdad50ea6f500f175,
     type: 2}
+  deathText: {fileID: 0}
 --- !u!212 &212976011909045750
 SpriteRenderer:
   m_ObjectHideFlags: 1
